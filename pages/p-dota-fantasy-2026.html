@@ -87,14 +87,20 @@
                 <h1 class="article-title text-center">Total Results of the Event</h1>
               </div>
               <h2>The goal</h2>
-              <p> <strong>Reach the top 1,500 players in the Dota 2 Fantasy and Predictions event.</strong> The approximate cutoff was
-                around 31,000 points, while the 95th percentile sat at just 20,743 points. Our goal was therefore
+              <p> <strong>Finish among the top 1,500 players in the Dota 2 Fantasy and Predictions event.</strong> 
+                The approximate cutoff <a href="https://www.reddit.com/r/DotA2/comments/1w07jtg/top_1500_cutoff/" class="text-primary">was around 31,000 points,</a> while the 
+                <a href="../assets/img/unlucky.png" class="text-primary">95th percentile sat at just 20,743 points.</a> Our goal was therefore
                 ambitious, but the model still had to account for a lot of uncertainty: player performance, game count,
                 matchups and, inevitably, some good old-fashioned luck. </p>
+              <p>
+                The scoring system allowed up to 12,000 points per stage across the four scoring categories, for a theoretical maximum of 48,000 points. 
+                In practice, the leaderboard was unavailable, so the actual maximum score is unknown, but the ~31,000-point cutoff for the top 1,500 was already a particularly demanding target.
+              </p>
               <h2>The problem</h2>
               <p> Build a Fantasy roster of 2 cores, 1 mid and 2 supports, then maximize the points
-                they would earn throughout the tournament. To do that, I combined player performance, games played, hero
-                selections, roles, team matchups, tournament stage and Valve's scoring rules. </p>
+                they would earn throughout the tournament. For that I combined player performance, historical tournament results, 
+                games played, hero selections, roles, team matchups, tournament stage and Valve's scoring rules, 
+                diversifying the roster so that one team's failure wouldn't sink the ship. </p>
               <p> Rather than simply picking the strongest players, I turned that data into expected Fantasy value and
                 used it to find the combination most likely to maximize the final score. Bracket predictions were
                 handled separately, since predicting which team wins a series is a very different problem from
@@ -102,7 +108,7 @@
 
               <h2>The result</h2>
               <p>
-                The results were... mixed.
+                The results were mixed.
               </p>
               <p>
                 On one hand we have the <strong>Group Stage</strong> where the Fantasy roster reached the <strong>94.1
@@ -110,7 +116,7 @@
               </p>
               <p>
                 The <strong>Main Event</strong> predictions, however, got absolutely destroyed at <strong>3/14
-                  correct</strong>, but the Fantasy strategy
+                  correct</strong> since a team failing to win a match could throw the entire bracket off in a cascade, but the Fantasy strategy
                 worked: the roster reached the <strong>99.9th percentile</strong>, contributing to a final
                 result of <strong>25,732 points</strong> and the <strong>98th percentile</strong> overall. </p>
               <div class="container">
@@ -184,7 +190,7 @@
             <div class="widget-sidebar-conti">
               <h5 class="sidebar-title">Google Sheet</h5>
               <div class="sidebar-content">
-                <a href="https://docs.google.com/spreadsheets/d/1O_hI7pA4yaRRtQIPE3c7s_Xe1qi2qQ7e11sS43QoBW8/edit?gid=853721707#gid=853721707" target="_blank" class="text-primary">All the data needed for the project</a>
+                <a href="https://docs.google.com/spreadsheets/d/1O_hI7pA4yaRRtQIPE3c7s_Xe1qi2qQ7e11sS43QoBW8/edit?gid=853721707#gid=853721707" class="text-primary" target="_blank">All the data needed for the project</a>
               </div>
             </div>
             <div class="widget-sidebar-conti">
